@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import './responsive.scss';
 
 $text-color: #D1CED4;
 $primary-color: #F9D201;
@@ -36,6 +37,9 @@ h1, h2, h3, h4, h5, h6{
 }
 h3{
     font-size: 36px;
+    @include Responsive(SM){
+        font-size: 32px;
+    }
 }
 section{
     background: $bg-color;
@@ -47,7 +51,7 @@ section{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 10px;
+    padding: 0 16px;
     background: $primary-color;
     color: $color-dark;
     font-weight: 600;
@@ -83,8 +87,15 @@ section{
     padding: 24px 160px;
     z-index: 100;
     transition: 0.2s ease-in;
+    @include Responsive(XXL){
+        padding: 24px 60px;
+    }
+    @include Responsive(MD){
+        padding: 24px 24px;
+    }
     &.active{
-        padding: 10px 160px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background: $bg-color;
     }
     &__logo{
@@ -92,14 +103,35 @@ section{
             height: 48px;
         }
     }
-
+    .btn{
+        @include Responsive(XL){
+            display: none;
+        }
+    }
+    &__icon{
+        z-index: 10;
+        display: none;
+        @include Responsive(SM){
+            display: inline-block;
+        }
+        i{
+            color: #fff;
+            font-size: 24px;
+        }
+    }
     &__menu{
         display: flex;
         align-items: center;
+        @include Responsive(SM){
+            display: none;
+        }
         &-item{
             list-style: none;
             &:not(:last-child){
                 margin-right: 36px;
+                @include Responsive(XL){
+                    margin-right: 24px;
+                }
             }
             
         }
@@ -209,14 +241,21 @@ section{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
+    @include Responsive(XXL){
+        padding: 130px 60px;
+    }
+    @include Responsive(MD){
+        padding: 130px 24px;
+    }
+    @include Responsive(SM){
+        grid-template-columns: repeat(1, 1fr);
+    }
 	.content{
 		&__box{
 			max-width: 544px;
 		}
 		&__title{
 			margin-bottom: 25px;
-			font-size: 36px;
-			
 		}
 		&__desc{
 			margin-bottom: 15px;
@@ -234,6 +273,10 @@ section{
 	.image{
 		display: flex;
 		justify-content: flex-end;
+        @include Responsive(SM){
+            justify-content: center;
+            margin-top: 48px;
+        }
 		&__box{
 			max-width: 72%;
 			position: relative;
@@ -264,6 +307,12 @@ section{
     background-size: cover;
 	text-align: center;
     position: relative;
+    @include Responsive(XXL){
+        padding: 105px 60px;
+    }
+    @include Responsive(MD){
+        padding: 105px 24px;
+    }
 	.logo1{
 		max-width: 124px;
 		margin-bottom: 24px;
@@ -271,17 +320,28 @@ section{
 	h3{
 		font-size: 30px;
 		margin-bottom: 24px;
-		
+		@include Responsive(SM){
+            font-size: 24px;
+        }
 	}
 	h4{
 		font-size: 18px;
 		margin-bottom: 24px;
 		font-weight: 400;
+        @include Responsive(SM){
+            font-size: 16px;
+        }
 	}
 
 	.list{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+        @include Responsive(MD){
+            grid-template-columns: repeat(1, 1fr);
+            li{
+                margin-bottom: 16px;
+            }
+        }
 		.logo2{
 			max-width: 70px;
 		}
@@ -311,15 +371,29 @@ section{
     display: grid;
     grid-template-columns: repeat(2, 1fr );
     align-items: center;
+    @include Responsive(XXL){
+        padding: 105px 60px;
+    }
+    @include Responsive(MD){
+        padding: 105px 24px;
+    }
+    @include Responsive(SM){
+        grid-template-columns: repeat(1, 1fr );
+    }
+    
     .image{
         display: flex;
         justify-content: flex-start;
         img{
             max-width: 583px;
+            width: 100%;
         }
     }
     .content{
         padding-left: 40px;
+        @include Responsive(SM){
+            padding-left: 0;
+        }
         h3{
             margin-bottom: 20px;
         }
@@ -372,6 +446,12 @@ section{
     background: url(./images/home/bg-section4.png) $bg-color no-repeat;
 	background-position: center;
     background-size: cover;
+    @include Responsive(XXL){
+        padding: 95px 60px;
+    }
+    @include Responsive(MD){
+        padding: 95px 24px;
+    }
     h3{
         margin-bottom: 90px;
     }
@@ -379,6 +459,11 @@ section{
         display: grid;
         grid-gap: 24px;
         grid-template-columns: repeat(3, 1fr );
+        @include Responsive(MD){
+            grid-gap: 16px;
+            
+        }
+        
         h5{
             margin-bottom: 8px;
         }
@@ -404,12 +489,58 @@ section{
                 right: -24px;
                 bottom: -24px;
                 border: 1px solid $primary-color;
+                @include Responsive(MD){
+                    left: 16px;
+                    top: -16px;
+                    right: -16px;
+                    bottom: -16px;
+                }
+            }
+        }
+    }
+    .top-list{
+        @include Responsive(SM){
+            grid-template-columns: repeat(4, 1fr );
+            li{
+                grid-column: 2 span;
+                &:last-child{
+                    grid-column: 2 / 4 ;
+                }
+            }
+        }
+        @include Responsive(XS){
+            grid-template-columns: repeat(1, 1fr );
+            li{
+                grid-column: auto;
+                &:last-child{
+                    grid-column: auto;
+                }
             }
         }
     }
     .bottom-list{
         grid-template-columns: repeat(4, 1fr );
         margin-top: 65px;
+        @include Responsive(MD){
+            grid-template-columns: repeat(3, 1fr );
+            li{
+                margin-bottom: 32px;
+                &:last-child{
+                    grid-column: 2 / 3;
+                }
+            }
+        }
+        @include Responsive(SM){
+            grid-template-columns: repeat(2, 1fr );
+            li{
+                &:last-child{
+                    grid-column: auto;
+                }
+            }
+        }
+        @include Responsive(XS){
+            grid-template-columns: repeat(1, 1fr );
+        }
     }
 }
 
@@ -417,6 +548,12 @@ section{
     padding: 105px 160px;
     padding-right: 0;
     background: #001f49;
+    @include Responsive(XXL){
+        padding: 105px 60px;
+    }
+    @include Responsive(MD){
+        padding: 105px 24px;
+    }
     h3{
         margin-bottom: 40px;
     }
@@ -424,7 +561,7 @@ section{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         overflow-x: scroll;
-        width: calc(100% - 160px);
+        width: 100%;
         position: relative;
         padding: 10px 0;
         &::-webkit-scrollbar{
@@ -518,6 +655,12 @@ section{
     background-size: cover; 
     text-align: center;
     position: relative;
+    @include Responsive(XXL){
+        padding: 170px 60px;
+    }
+    @include Responsive(MD){
+        padding: 170px 24px;
+    }
     &::before{
         position: absolute;
         content: '';
@@ -586,9 +729,21 @@ section{
     background-size: cover; 
     padding: 105px 160px 150px 160px;
     position: relative;
+    @include Responsive(XXL){
+        padding: 105px 60px 150px 60px;
+    }
+    @include Responsive(MD){
+        padding: 105px 24PX 150px 24PX;
+    }
     &__list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @include Responsive(MD){
+            grid-template-columns: repeat(1, 1fr);
+            &-item{
+                margin-bottom: 24px;
+            }
+        }
         &-item:first-child{
             max-width: 352px;
             img{
@@ -602,12 +757,19 @@ section{
         &-item:last-child{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            @include Responsive(MD){
+                grid-template-columns: repeat(1, 1fr);
+            }
             a{
                 color: $white-color;
                 margin-bottom: 24px;
                 display: inline-block;
             }
             div{
+                justify-self: end;
+                @include Responsive(MD){
+                    justify-self: start;
+                }
                 p{
                     margin-bottom: 16px;
                 }

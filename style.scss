@@ -541,8 +541,10 @@ section{
             grid-template-columns: repeat(4, 1fr );
             li{
                 grid-column: 2 span;
+                margin-bottom: 32px;
                 &:last-child{
                     grid-column: 2 / 4 ;
+                    margin-bottom: 48px;
                 }
             }
         }
@@ -570,6 +572,7 @@ section{
         }
         @include Responsive(SM){
             grid-template-columns: repeat(2, 1fr );
+            margin-top: 0;
             li{
                 &:last-child{
                     grid-column: auto;
@@ -672,16 +675,30 @@ section{
             }
             &:nth-child(odd){
                 flex-direction: column-reverse;
+                @include Responsive(SM){
+                    flex-direction: column;
+                }
                 p{
                     display: flex;
                     align-items: flex-end;
                     margin-bottom: 60px;
+                    @include Responsive(SM){
+                        align-items: flex-start;
+                        margin-bottom: 0;
+                    }
                 }
                 .image{
                     margin-bottom: 0;
+                    @include Responsive(SM){
+                        margin-bottom: 60px;
+                    }
                     img{
                         margin-top: 20px;
+                        @include Responsive(SM){
+                            margin-top: 0;
+                        }
                     }
+                    
                 }
             }
         }

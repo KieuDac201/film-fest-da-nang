@@ -71,6 +71,7 @@ section{
 .btn-group{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .btn-outline{
     color: $primary-color;

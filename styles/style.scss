@@ -76,6 +76,11 @@ section{
     color: $primary-color;
     background: none;
 }
+.btn-grey{
+    color: $text-color;
+    border: 1px solid rgba($white-color, 0.3);
+    background: none;
+}
 
 .nav{
     position: fixed;
@@ -422,6 +427,12 @@ section{
                     bottom: -24px;
                     right: 24px;
                     border: 1px solid $primary-color;
+                    @include Responsive(MD){
+                        top: -16px;
+                        left: -16px;
+                        bottom: -16px;
+                        right: 16px;
+                    }
                 }
             }
         }
@@ -511,6 +522,9 @@ section{
         .image{
             display: flex;
             justify-content: flex-start;
+            @include Responsive(SM){
+                margin-bottom: 16px;
+            }
             img{
                 max-width: 583px;
                 width: 100%;
@@ -965,6 +979,9 @@ section{
                 h4{
                     font-size: 32px;
                     margin-bottom: 16px;
+                    @include Responsive(SM){
+                        font-size: 28px;
+                    } 
                 }
                 p{
                     margin-bottom: 16px;
@@ -1016,6 +1033,107 @@ section{
                     }
                 }
                 
+            }
+        }
+    }
+}
+
+.giaithuong{
+    .award{
+        padding: 136px 160px 50px 160px;
+        background: url(../images/giaithuong/bg.png) $bg-color no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        @include Responsive(XXL){
+            padding: 136px 60px 50px 60px;
+        }
+        @include Responsive(MD){
+            padding: 136px 24px 50px 24px;
+        }
+        h3{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 32px;
+            .star{
+                position: absolute;
+                width: 54px;
+            }
+            .star1{
+                left: -60%;
+            }
+            .star2{
+                right: -60%;
+            }
+        }
+        h4{
+            margin-bottom: 48px;
+            font-size: 24px;
+            @include Responsive(SM){
+                font-size: 22px;
+            }
+            span{
+                color: $primary-color;
+            }
+        }
+        &__main{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 32px;
+            @include Responsive(MD){
+                flex-wrap: wrap;
+            }
+            &-item{
+                max-width: 543px;
+                animation: show 0.5s ease;
+                @include Responsive(MD){
+                    max-width: 380px;
+                }
+                @include Responsive(SM){
+                    max-width: 80%;
+                }
+                @include Responsive(XS){
+                    max-width: 100%;
+                }
+                @keyframes show {
+                    from{
+                        transform: translateY(200px);
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+                img{
+                    margin-bottom: 16px;
+                }
+                .title{
+                    font-size: 30px;
+                    @include Responsive(SM){
+                        font-size: 26px;
+                    }
+                }
+            }
+            &-content{
+                max-width: 440px;
+                margin: 0 auto;
+                h4{
+                    font-size: 18px;
+                    margin-bottom: 16px;
+                }
+                h5{
+                    font-size: 16px;
+                    color: $primary-color;
+                    margin-bottom: 16px;
+                }
+                p{
+                    margin-bottom: 16px;
+                }
             }
         }
     }

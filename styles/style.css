@@ -95,6 +95,12 @@ section {
   background: none;
 }
 
+.btn-grey {
+  color: #D1CED4;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: none;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -617,6 +623,15 @@ section {
   border: 1px solid #F9D201;
 }
 
+@media only screen and (max-width: 992px) {
+  .trangchu .section-one .image__box::before {
+    top: -16px;
+    left: -16px;
+    bottom: -16px;
+    right: 16px;
+  }
+}
+
 .trangchu .section-two {
   padding: 105px 160px;
   background: url(../images/home/bg-section-2.png) #021533 no-repeat;
@@ -746,6 +761,12 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media only screen and (max-width: 799px) {
+  .trangchu .section-three .image {
+    margin-bottom: 16px;
+  }
 }
 
 .trangchu .section-three .image img {
@@ -1401,6 +1422,12 @@ section {
   margin-bottom: 16px;
 }
 
+@media only screen and (max-width: 799px) {
+  .thelecuocthi .artwork__item-content h4 {
+    font-size: 28px;
+  }
+}
+
 .thelecuocthi .artwork__item-content p {
   margin-bottom: 16px;
   width: 70%;
@@ -1473,5 +1500,171 @@ section {
     bottom: -16px;
     right: 16px;
   }
+}
+
+.giaithuong .award {
+  padding: 136px 160px 50px 160px;
+  background: url(../images/giaithuong/bg.png) #021533 no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1350px) {
+  .giaithuong .award {
+    padding: 136px 60px 50px 60px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .giaithuong .award {
+    padding: 136px 24px 50px 24px;
+  }
+}
+
+.giaithuong .award h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
+.giaithuong .award h3 .star {
+  position: absolute;
+  width: 54px;
+}
+
+.giaithuong .award h3 .star1 {
+  left: -60%;
+}
+
+.giaithuong .award h3 .star2 {
+  right: -60%;
+}
+
+.giaithuong .award h4 {
+  margin-bottom: 48px;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 799px) {
+  .giaithuong .award h4 {
+    font-size: 22px;
+  }
+}
+
+.giaithuong .award h4 span {
+  color: #F9D201;
+}
+
+.giaithuong .award__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  gap: 32px;
+}
+
+@media only screen and (max-width: 992px) {
+  .giaithuong .award__main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.giaithuong .award__main-item {
+  max-width: 543px;
+  -webkit-animation: show 0.5s ease;
+          animation: show 0.5s ease;
+}
+
+@media only screen and (max-width: 992px) {
+  .giaithuong .award__main-item {
+    max-width: 380px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .giaithuong .award__main-item {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .giaithuong .award__main-item {
+    max-width: 100%;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.giaithuong .award__main-item img {
+  margin-bottom: 16px;
+}
+
+.giaithuong .award__main-item .title {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 799px) {
+  .giaithuong .award__main-item .title {
+    font-size: 26px;
+  }
+}
+
+.giaithuong .award__main-content {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.giaithuong .award__main-content h4 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.giaithuong .award__main-content h5 {
+  font-size: 16px;
+  color: #F9D201;
+  margin-bottom: 16px;
+}
+
+.giaithuong .award__main-content p {
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=style.css.map */

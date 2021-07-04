@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Fest DaNang</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../main.js" defer></script>
+  </head>
+  <body class="giaithuong">
+    <nav class="nav">
+      <a href="../index.html" class="nav__logo">
+        <img src="../images/common/logo.png" alt="logo" />
+      </a>
+      <ul class="nav__menu">
+        <li class="nav__menu-item">
+          <a href="../index.html" class="nav__menu-link"> Trang chủ </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="./thelecuocthi.html" class="nav__menu-link">
+            Thể lệ cuộc thi
+          </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="./giaithuong.html" class="nav__menu-link active">
+            Giải thưởng
+          </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="./baiduthi.html" class="nav__menu-link"> Bài dự thi </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="./uudai.html" class="nav__menu-link"> Uư đãi </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="#" class="nav__menu-link"> Tin tức </a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="#" class="nav__menu-link"> Liên hệ </a>
+        </li>
+      </ul>
+      <button class="btn btn-outline">
+        <img src="../images/home/user-icon.png" alt="" />
+        <span>Đăng ký</span>
+      </button>
+      <div class="nav__icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section class="award">
+      <h3>
+        <img src="../images/common/star1.png" class="star star1" alt="" />
+        <img src="../images/common/star2.png" class="star star2" alt="" />
+        Giải thưởng
+      </h3>
+      <h4>
+        Tổng giải thưởng của cuộc thi có trị giá trên
+        <span>300.000.000 VNĐ </span>
+      </h4>
+      <div class="btn-group">
+        <div class="btn btn-award" data-award="special">Giải Đặc Biệt</div>
+        <div class="btn btn-award btn-grey" data-award="gold">Giải Vàng</div>
+        <div class="btn btn-award btn-grey" data-award="silver">Giải Digital</div>
+      </div>
+
+      <div class="award__main">
+        <div class="award__main-item">
+          <img src="../images/giaithuong/award-special.png" alt="" />
+          <div class="award__main-content">
+            <h4>1 giải đặc biệt - Giải Sông Hàn</h4>
+            <h5>100.000.000.000 VNĐ (một trăm triệu đồng)</h5>
+            <p>
+              Vé máy bay khứ hồi và Voucher lưu trú khách sạn (tiêu chuẩn 4 - 5
+              sao) dành cho ekip sản xuất (không quá 5 người)
+            </p>
+            <p>
+              Biểu tượng Cuộc thi Phim ngắn Đà Nẵng Lần thứ I – 2021 “KHÁM PHÁ
+              ĐÀ NẴNG TUYỆT VỜI - WOW DA NANG”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <img src="../images/common/logo.png" alt="" />
+          <p>
+            Trung tâm Hành chính Đà Nẵng 24 Đường Trần Phú, Thạch Thang, Hải
+            Châu, TP. Đà Nẵng
+          </p>
+          <p>
+            Công ty CP Truyền thông đa phương tiện Đời Sống Trẻ 57 Cao Thắng,
+            Phường 3, Quận 3, TP. Hồ Chí Minh
+          </p>
+          <p>Email: info@danang@filmfest.vn</p>
+          <p>Hotline: 090 666 43 59</p>
+        </li>
+        <li class="footer__list-item">
+          <ul>
+            <li><a href="">Câu hỏi thường gặp</a></li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Chính sách & bảo mật</a></li>
+          </ul>
+          <div>
+            <p>Liên hệ với chúng tôi</p>
+            <div class="sci">
+              <a href="#"><img src="../images/common/fb-icon.png" alt="" /></a>
+              <a href="#"
+                ><img src="../images/common/instagram-icon.png" alt=""
+              /></a>
+              <a href="#"><img src="../images/common/yt-icon.png" alt="" /></a>
+              <a href="#"
+                ><img src="../images/common/tiktok-icon.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="footer__bottom">
+        <p>Copyright © 2020 Filmfest Da Nang</p>
+      </div>
+      <img src="../images/common/star1.png" alt="" class="star star1" />
+      <img src="../images/common/star2.png" alt="" class="star star2" />
+    </footer>
+
+    <script type="module">
+      import dataAward from '../data/dataAward.js'
+      const btns = document.querySelectorAll('.btn-award')
+      const awardContainer = document.querySelector('.award__main')
+
+      let currentAward = 'special'
+      btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          let data = e.target.getAttribute('data-award')
+
+          if(data === currentAward) return
+          
+          btns.forEach(btn2 => {
+            btn2.classList.add('btn-grey')
+          })
+          e.target.classList.remove('btn-grey')
+
+          
+          renderAward(data)
+          currentAward = data
+        })
+      })
+
+      function renderAward(type){
+        let html = ''
+        dataAward[type].forEach(item => {
+          html += `<div class="award__main-item">
+            ${type === 'silver' ? '<h4 class="title"> Giải thưởng đạt được </h4>' : ''}
+          <img src="${item.img}" alt="" />
+          <div class="award__main-content">
+            <h4>${item.h4}</h4>
+            <h5>${item.h5}</h5>
+            <p>
+              ${item.p[0]}
+            </p>
+            <p>
+              ${item.p[1]}
+            </p>
+          </div>
+        </div>`
+        })
+        if(type === 'silver'){
+         
+        }
+        awardContainer.innerHTML = html
+      }
+    </script>
+  </body>
+</html>

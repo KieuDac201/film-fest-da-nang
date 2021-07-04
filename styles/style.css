@@ -41,9 +41,20 @@ h3 {
 
 @media only screen and (max-width: 799px) {
   h3 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.3;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+h4 {
+  line-height: 1.5;
 }
 
 section {
@@ -77,10 +88,6 @@ section {
   margin-right: 5px;
 }
 
-.btn ~ .btn {
-  margin-left: 32px;
-}
-
 .btn-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +97,11 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 32px;
+  row-gap: 10px;
 }
 
 .btn-outline {
@@ -671,6 +683,12 @@ section {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .trangchu .section-two h3 {
+    font-size: 20px;
+  }
+}
+
 .trangchu .section-two h4 {
   font-size: 18px;
   margin-bottom: 24px;
@@ -680,6 +698,12 @@ section {
 @media only screen and (max-width: 799px) {
   .trangchu .section-two h4 {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .trangchu .section-two h4 {
+    font-size: 14px;
   }
 }
 
@@ -1430,6 +1454,12 @@ section {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .thelecuocthi .artwork__item-content h4 {
+    font-size: 20px;
+  }
+}
+
 .thelecuocthi .artwork__item-content p {
   margin-bottom: 16px;
   width: 70%;
@@ -1564,6 +1594,12 @@ section {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .giaithuong .award h4 {
+    font-size: 16px;
+  }
+}
+
 .giaithuong .award h4 span {
   color: #F9D201;
 }
@@ -1647,6 +1683,12 @@ section {
 @media only screen and (max-width: 799px) {
   .giaithuong .award__main-item .title {
     font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .giaithuong .award__main-item .title {
+    font-size: 22px;
   }
 }
 

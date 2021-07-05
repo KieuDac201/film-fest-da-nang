@@ -1334,6 +1334,12 @@ section {
   aspect-ratio: 6 / 3.5;
 }
 
+@media only screen and (max-width: 992px) {
+  .thelecuocthi .header__image {
+    border-width: 8px;
+  }
+}
+
 .thelecuocthi .header__image .video {
   position: absolute;
   top: 0;
@@ -1710,5 +1716,260 @@ section {
 
 .giaithuong .award__main-content p {
   margin-bottom: 16px;
+}
+
+.baiduthi .header {
+  padding: 150px 60px 160px 60px;
+  background: url(../images/baiduthi/bg-header.png) #021533 no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .baiduthi .header {
+    padding: 150px 24px 160px 24px;
+  }
+}
+
+.baiduthi .header h3 {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.baiduthi .header h3 .star {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 54px;
+  width: 100%;
+}
+
+.baiduthi .header h3 .star.star1 {
+  left: -23%;
+}
+
+.baiduthi .header h3 .star.star2 {
+  right: -23%;
+}
+
+.baiduthi .header__input {
+  max-width: 416px;
+  width: 100%;
+  border: 1px solid #D1CED4;
+  border-radius: 4px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px 0;
+}
+
+.baiduthi .header__input input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.baiduthi .header__input input::-webkit-input-placeholder {
+  color: #D1CED4;
+}
+
+.baiduthi .header__input input:-ms-input-placeholder {
+  color: #D1CED4;
+}
+
+.baiduthi .header__input input::-ms-input-placeholder {
+  color: #D1CED4;
+}
+
+.baiduthi .header__input input::placeholder {
+  color: #D1CED4;
+}
+
+.baiduthi .header__image {
+  max-width: 928px;
+  width: 100%;
+  border: 12px solid #FFFFFF;
+  position: relative;
+}
+
+@media only screen and (max-width: 799px) {
+  .baiduthi .header__image {
+    border-width: 8px;
+  }
+}
+
+.baiduthi .header__image .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 7%;
+}
+
+.baiduthi .header__info {
+  max-width: 928px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.baiduthi .header__info h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.baiduthi .header__info p {
+  margin-bottom: 8px;
+}
+
+.baiduthi .header__info p span {
+  color: #F9D201;
+}
+
+.baiduthi .header__progress {
+  margin-top: 64px;
+  max-width: 736px;
+  width: 100%;
+}
+
+.baiduthi .header__progress h4 {
+  font-size: 30px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .baiduthi .header__progress h4 {
+    font-size: 22px;
+  }
+}
+
+.baiduthi .header__progress-list {
+  position: relative;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 480px) {
+  .baiduthi .header__progress-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.baiduthi .header__progress-list::before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  top: 24px;
+  left: 10%;
+  background: #FFFFFF;
+  opacity: 0.2;
+  right: 10%;
+}
+
+@media only screen and (max-width: 480px) {
+  .baiduthi .header__progress-list::before {
+    width: 8px;
+    height: 100%;
+    top: 0;
+    left: 24px;
+  }
+}
+
+.baiduthi .header__progress-item {
+  z-index: 1;
+  max-width: 138px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .baiduthi .header__progress-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+  .baiduthi .header__progress-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.baiduthi .header__progress-item:first-child div {
+  background: #F9D201;
+}
+
+.baiduthi .header__progress-item div {
+  background: #021533;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #D1CED4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 480px) {
+  .baiduthi .header__progress-item div {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}
+
+.baiduthi .header__progress-item div img {
+  width: 24px;
 }
 /*# sourceMappingURL=style.css.map */

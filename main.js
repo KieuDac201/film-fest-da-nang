@@ -1,6 +1,8 @@
 const navE = document.querySelector('.nav')
 const navIcon = document.querySelector('.nav__icon')
 const navMenu = document.querySelector('.nav__menu')
+const btnDropdown = document.querySelector('.nav__menu-dropdown .nav__menu-link')
+const dropdownE = document.querySelector('.dropdown-list')
 
 let isScroll = false
 
@@ -19,4 +21,9 @@ navIcon.addEventListener('click', () => {
         navIcon.innerHTML = '<i class="fas fa-times"></i>'
         navMenu.classList.add('active')
     }
+})
+
+btnDropdown.addEventListener('click', (e) => {
+    e.preventDefault()
+    dropdownE.classList.toggle('active')
 })

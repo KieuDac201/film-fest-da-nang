@@ -1808,10 +1808,10 @@ section {
         @include Responsive(SM) {
           width: 30px;
           &.star1 {
-            left: -60%;
+            left: -20%;
           }
           &.star2 {
-            right: -60%;
+            right: -20%;
           }
         }
       }
@@ -1946,6 +1946,236 @@ section {
               order: 2;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.faq {
+  header {
+    background: $bg-color;
+    padding: 132px 160px 50px 160px;
+    background: url(../images/giaidoan/bg.png) $bg-color no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include Responsive(XXL) {
+      padding: 132px 60px 50px 60px;
+    }
+    @include Responsive(MD) {
+      padding: 132px 24px 50px 24px;
+    }
+    h3 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 56px;
+      .star {
+        position: absolute;
+        width: 54px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include Responsive(SM) {
+          width: 30px;
+          &.star1 {
+            left: -20%;
+          }
+          &.star2 {
+            right: -20%;
+          }
+        }
+      }
+      .star1 {
+        left: -70%;
+      }
+      .star2 {
+        right: -70%;
+      }
+    }
+    .list {
+      max-width: 992px;
+      width: 100%;
+      .item {
+        padding: 10px 18px;
+        border: 1px solid $primary-color;
+        margin-bottom: 16px;
+        .title {
+          min-height: 52px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          h5 {
+            color: $primary-color;
+            font-size: 16px;
+          }
+          img {
+            width: 16px;
+          }
+        }
+        .content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease;
+          span {
+            font-weight: 500;
+            color: $white-color;
+          }
+          li {
+            color: $text-color;
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+        &.active {
+          .title {
+            img {
+              transition: 0.2s ease;
+              transform: rotate(90deg);
+            }
+          }
+          .content {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            max-height: 1000px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tracuu {
+  header {
+    background: $bg-color;
+    padding: 132px 160px 100px 160px;
+    background: url(../images/giaidoan/bg.png) $bg-color no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include Responsive(XXL) {
+      padding: 132px 60px 100px 60px;
+    }
+    @include Responsive(MD) {
+      padding: 132px 24px 100px 24px;
+    }
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 56px;
+      .star {
+        position: absolute;
+        width: 54px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include Responsive(SM) {
+          width: 30px;
+          &.star1 {
+            left: -20%;
+          }
+          &.star2 {
+            right: -20%;
+          }
+        }
+      }
+      .star1 {
+        left: -40%;
+      }
+      .star2 {
+        right: -40%;
+      }
+    }
+    .search-input {
+      height: 56px;
+      max-width: 412px;
+      width: 100%;
+      border: 1px solid rgba($white-color, 0.5);
+      border-radius: 4px;
+      display: flex;
+      padding-right: 16px;
+      align-items: center;
+      margin-bottom: 32px;
+      input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        padding: 16px;
+        color: $white-color;
+        &::placeholder {
+          color: $text-color;
+        }
+      }
+      img {
+        width: 24px;
+      }
+    }
+    .cards {
+      max-width: 928px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 32px;
+      @include Responsive(SM) {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        > p {
+          font-size: 12px;
+          margin-top: 8px;
+        }
+        h5 {
+          color: $primary-color;
+        }
+        div {
+          display: flex;
+          p {
+            margin-top: 8px;
+            &:first-child {
+              padding-right: 12px;
+              border-right: 1px solid rgba($white-color, 0.2);
+            }
+            &:last-child {
+              padding-left: 12px;
+            }
+          }
+          span {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .pagination {
+      margin-top: 48px;
+      button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        background: $text-color;
+        border-radius: 4px;
+        display: inline-flex;
+        border: none;
+        outline: none;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        margin: 0 4px;
+        cursor: pointer;
+        &.active {
+          background: $primary-color;
+          color: #fff;
+        }
+        &.disable {
+          background: grey;
         }
       }
     }

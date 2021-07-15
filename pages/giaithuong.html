@@ -38,8 +38,10 @@
           <a href="./uudai.html" class="nav__menu-link"> Uư đãi </a>
         </li>
         <li class="nav__menu-item nav__menu-dropdown">
-          <a href="#" class="nav__menu-link"> Tin tức  <img src="../images/common/dropdown-icon.png" alt=""></a>
-          <ul  class="dropdown-list">
+          <a href="#" class="nav__menu-link">
+            Tin tức <img src="../images/common/dropdown-icon.png" alt=""
+          /></a>
+          <ul class="dropdown-list">
             <li class="dropdown-item">
               <a href="./giaidoancuocthi.html">Giai đoạn cuộc thi</a>
             </li>
@@ -58,7 +60,7 @@
           <a href="./lienhe.html" class="nav__menu-link"> Liên hệ </a>
         </li>
       </ul>
-      <button class="btn btn-outline">
+      <button class="btn btn-outline btn-register">
         <img src="../images/home/user-icon.png" alt="" />
         <span>Đăng ký</span>
       </button>
@@ -80,7 +82,9 @@
       <div class="btn-group">
         <div class="btn btn-award" data-award="special">Giải Đặc Biệt</div>
         <div class="btn btn-award btn-grey" data-award="gold">Giải Vàng</div>
-        <div class="btn btn-award btn-grey" data-award="silver">Giải Digital</div>
+        <div class="btn btn-award btn-grey" data-award="silver">
+          Giải Digital
+        </div>
       </div>
 
       <div class="award__main">
@@ -146,33 +150,36 @@
     </footer>
 
     <script type="module">
-      import dataAward from '../data/dataAward.js'
-      const btns = document.querySelectorAll('.btn-award')
-      const awardContainer = document.querySelector('.award__main')
+      import dataAward from "../data/dataAward.js";
+      const btns = document.querySelectorAll(".btn-award");
+      const awardContainer = document.querySelector(".award__main");
 
-      let currentAward = 'special'
-      btns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          let data = e.target.getAttribute('data-award')
+      let currentAward = "special";
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          let data = e.target.getAttribute("data-award");
 
-          if(data === currentAward) return
-          
-          btns.forEach(btn2 => {
-            btn2.classList.add('btn-grey')
-          })
-          e.target.classList.remove('btn-grey')
+          if (data === currentAward) return;
 
-          
-          renderAward(data)
-          currentAward = data
-        })
-      })
+          btns.forEach((btn2) => {
+            btn2.classList.add("btn-grey");
+          });
+          e.target.classList.remove("btn-grey");
 
-      function renderAward(type){
-        let html = ''
-        dataAward[type].forEach(item => {
+          renderAward(data);
+          currentAward = data;
+        });
+      });
+
+      function renderAward(type) {
+        let html = "";
+        dataAward[type].forEach((item) => {
           html += `<div class="award__main-item">
-            ${type === 'silver' ? '<h4 class="title"> Giải thưởng đạt được </h4>' : ''}
+            ${
+              type === "silver"
+                ? '<h4 class="title"> Giải thưởng đạt được </h4>'
+                : ""
+            }
           <img src="${item.img}" alt="" />
           <div class="award__main-content">
             <h4>${item.h4}</h4>
@@ -184,12 +191,11 @@
               ${item.p[1]}
             </p>
           </div>
-        </div>`
-        })
-        if(type === 'silver'){
-         
+        </div>`;
+        });
+        if (type === "silver") {
         }
-        awardContainer.innerHTML = html
+        awardContainer.innerHTML = html;
       }
     </script>
   </body>

@@ -1,4 +1,6 @@
+console.log("dac");
 const bodyE = document.querySelector("body");
+
 let bodyHtml = bodyE.innerHTML;
 let formHtml = `<div id="form">
 <div class="overlay"></div>
@@ -52,7 +54,8 @@ const btnDropdown = document.querySelector(
 );
 
 const dropdownE = document.querySelector(".dropdown-list");
-const btnRegister = document.querySelector(".btn-register");
+const btnRegisters = document.querySelectorAll(".btn-register");
+console.log(btnRegisters);
 
 let btnClose = document.querySelector(".btn-close");
 const formE = document.getElementById("form");
@@ -81,10 +84,11 @@ btnDropdown.addEventListener("click", (e) => {
   e.preventDefault();
   dropdownE.classList.toggle("active");
 });
-
 const openForm = () => {
-  btnRegister.addEventListener("click", () => {
-    formE.classList.add("active");
+  btnRegisters.forEach((btnRegister) => {
+    btnRegister.addEventListener("click", () => {
+      formE.classList.add("active");
+    });
   });
 };
 openForm();

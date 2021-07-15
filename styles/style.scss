@@ -100,6 +100,7 @@ section {
   opacity: 0;
   transition: 0.2s ease;
   z-index: 999;
+  visibility: hidden;
   .overlay {
     position: fixed;
     top: 0;
@@ -138,10 +139,12 @@ section {
       @include Responsive(MD) {
         font-size: 20px;
         margin-bottom: 12px;
+        padding-right: 24px;
       }
     }
     .form {
       padding: 20px 20px 0 20px;
+      background: $white-color;
       @include Responsive(MD) {
         padding: 0;
       }
@@ -200,6 +203,8 @@ section {
   }
   &.active {
     opacity: 1;
+    visibility: visible;
+    z-index: 999;
   }
 }
 
@@ -226,6 +231,7 @@ section {
     background: $bg-color;
   }
   &__logo {
+    margin-right: 12px;
     img {
       height: 48px;
     }
@@ -251,6 +257,7 @@ section {
   &__menu {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     @include Responsive(SM) {
       display: none;
     }
@@ -273,6 +280,12 @@ section {
     &-item {
       list-style: none;
       position: relative;
+      &.btn-register {
+        display: none;
+        @include Responsive(MD) {
+          display: block;
+        }
+      }
       &:not(:last-child) {
         margin-right: 36px;
         @include Responsive(XL) {

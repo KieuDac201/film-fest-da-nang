@@ -126,6 +126,7 @@ section {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   z-index: 999;
+  visibility: hidden;
 }
 
 #form .overlay {
@@ -185,11 +186,13 @@ section {
   #form .register h4 {
     font-size: 20px;
     margin-bottom: 12px;
+    padding-right: 24px;
   }
 }
 
 #form .register .form {
   padding: 20px 20px 0 20px;
+  background: #ffffff;
 }
 
 @media only screen and (max-width: 992px) {
@@ -272,6 +275,8 @@ section {
 
 #form.active {
   opacity: 1;
+  visibility: visible;
+  z-index: 999;
 }
 
 .nav {
@@ -312,6 +317,10 @@ section {
   background: #021533;
 }
 
+.nav__logo {
+  margin-right: 12px;
+}
+
 .nav__logo img {
   height: 48px;
 }
@@ -347,6 +356,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 799px) {
@@ -383,6 +394,16 @@ section {
 .nav__menu-item {
   list-style: none;
   position: relative;
+}
+
+.nav__menu-item.btn-register {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav__menu-item.btn-register {
+    display: block;
+  }
 }
 
 .nav__menu-item:not(:last-child) {
